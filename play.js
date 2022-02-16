@@ -17,4 +17,4 @@ console.log("Connecting ...");
 connect();
 
 // function to setup input running
-setupInput();
+setupInput(connect());
