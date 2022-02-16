@@ -1,9 +1,5 @@
 const net = require("net");
-
-const config = {
-  host: "165.227.47.243", // IP address here,
-  port: 50541, // PORT number here,
-};
+const { config } = require("./constants");
 
 // establishes a connection with the game server
 const connect = function () {
@@ -13,17 +9,23 @@ const connect = function () {
   conn.on("connect", () => {
     // code that does something when the connection is first established
     console.log("Successfully connected to game server");
-  });
 
-  // to see what the passed in data
-  conn.on("data", (data) => {
-    console.log("data: ", data);
-  });
-
-  // sending name data
-  conn.on("connect", () => {
+    // write name
     conn.write("Name: PTA");
   });
+
+  // write name
+  // conn.write("Name: PTA");
+
+  // // to see what the passed in data
+  // conn.on("data", (data) => {
+  //   console.log("data: ", data);
+  // });
+
+  // sending name data
+  // conn.on("connect", () => {
+  //   conn.write("Name: PTA");
+  // });
 
   //   // sending move up command
   //   conn.on("connect", () => {

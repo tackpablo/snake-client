@@ -13,8 +13,8 @@ const { setupInput } = require("./input");
 
 // message sent while connecting
 console.log("Connecting ...");
-// function to connect running
-connect();
+// // function to connect running
+// connect();
 
 // function to setup input running
 setupInput(connect());
