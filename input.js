@@ -28,22 +28,30 @@ const handleUserInput = function (key) {
 
   // if key press is w
   if (key === "w") {
-    conn.write("Move: up");
+    connection.write("Move: up");
   }
 
   // if key press is a
   if (key === "a") {
-    conn.write("Move: left");
+    connection.write("Move: left");
   }
 
   // if key press is s
   if (key === "s") {
-    conn.write("Move: down");
+    connection.write("Move: down");
   }
 
   // if key press is d
   if (key === "d") {
-    conn.write("Move: right");
+    connection.write("Move: right");
+  }
+
+  if (key === "z") {
+    connection.write("Say: Move out da way!");
+  }
+
+  if (key === "x") {
+    connection.write("Say: Collision incoming!");
   }
 };
 
